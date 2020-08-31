@@ -54,7 +54,7 @@ func GetTokenBalance(token, address string, decimals int) string {
 	caller, _ := tokenCaller(common.HexToAddress(token))
 	balance, _ := caller.BalanceOf(nil, common.HexToAddress(address))
 	// corrected := BigIntDecimal(balance, decimals)
-	return corrected
+	return balance
 }
 
 
